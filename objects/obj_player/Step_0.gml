@@ -1,4 +1,4 @@
- /// @description movement + wall collision
+/// @description movement + wall collision
 walkingspeed = .75; //universal speed
 
 if (room = house_interior) {
@@ -14,6 +14,17 @@ if (room = house_interior) {
     }
 } else if (room = seashore) { //move unconditionally in seashore, b/c no dialogue
     movement();
+	    if (place_meeting(x, y - sprite_yoffset, obj_crab)) { //collision w crab
+		crabmeet = true;
+		if (y > obj_crab.y - 5) { //in front of npc
+            depth = 2;
+        } else {
+		depth = 5;
+		}
+    } else { //behind crab
+		crabmeet = false
+		depth = 5;
+    }
 }
 
 if (alarm[0] <= 0) {
@@ -22,5 +33,5 @@ if (alarm[0] <= 0) {
     }
 }
 
-show_debug_message("Dialogue state: " + string(global.state));
-show_debug_message("Wood collected: " + string(global.wood));
+//show_debug_message("Dialogue state: " + string(global.state));
+//show_debug_message("Wood collected: " + string(global.wood));

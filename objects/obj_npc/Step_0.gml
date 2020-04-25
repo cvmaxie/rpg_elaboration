@@ -8,7 +8,7 @@
      alarm[1] = 2;
  }
  newstring = string_copy(wholestring, 1, charcount); //string with typewriter applied
- show_debug_message(charcount);
+ //show_debug_message(charcount);
  #endregion
 
  #region dialogue checker
