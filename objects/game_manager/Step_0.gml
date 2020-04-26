@@ -1,4 +1,7 @@
 /// @description room changer
+if (keyboard_check_pressed(ord("R"))) {
+room_restart();
+}
 if (room == start_screen) { //in start screen
     if (keyboard_check(vk_space)) { //check for spacebar pressed
         room_goto(seashore);

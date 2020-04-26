@@ -1,6 +1,4 @@
 /// @description movement + wall collision
-walkingspeed = .75; //universal speed
-
 if (room = house_interior) {
     if (obj_npc.talking = false) { //only move when no dialogue is happening
         movement();
@@ -15,14 +13,12 @@ if (room = house_interior) {
 } else if (room = seashore) { //move unconditionally in seashore, b/c no dialogue
     movement();
 	    if (place_meeting(x, y - sprite_yoffset, obj_crab)) { //collision w crab
-		crabmeet = true;
 		if (y > obj_crab.y - 5) { //in front of npc
             depth = 2;
         } else {
 		depth = 5;
 		}
     } else { //behind crab
-		crabmeet = false
 		depth = 5;
     }
 }
