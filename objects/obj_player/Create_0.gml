@@ -7,7 +7,8 @@ walkingspeed = .75; //universal speed
 
 up = 0; //direction states (useful for attack animation)
 down = 1;
-side = 2;
+left = 2;
+right = 3;
 
 lastdir = up; //last direction walked in
 

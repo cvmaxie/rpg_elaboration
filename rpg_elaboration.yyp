@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "67b4ebb5-ae50-4843-aba5-f22b67d3a9dd",
+            "Value": {
+                "id": "c851df31-dcb2-4a7f-95b8-9e1feece362b",
+                "resourcePath": "scripts\\crabwalk\\crabwalk.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "71976b26-d55e-4e41-a81e-da322964e33a",
             "Value": {
                 "id": "08c18de4-7ca5-4fde-866e-6f1a000b2d39",
@@ -698,7 +706,8 @@
     "script_order": [
         "ca1b1978-e160-4215-b4d1-6737f6447976",
         "f2344dfb-f506-4402-bd17-ed0c7319ba8a",
-        "53d1ea71-55ed-42fd-8c00-b3ae7bc03d3e"
+        "53d1ea71-55ed-42fd-8c00-b3ae7bc03d3e",
+        "67b4ebb5-ae50-4843-aba5-f22b67d3a9dd"
     ],
     "tutorial": ""
 }

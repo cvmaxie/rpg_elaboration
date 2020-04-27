@@ -1,65 +1,42 @@
 /// @description 
 if (obj_player.crabmeet) {
-    if (atktime > 0) {
+    if (atktime > 0) { //time crab is required to be in contact before player has been frozen
         atktime--;
-        if (atktime == 0) {
-            obj_player.freeze = true;
+        if (atktime == 0) { //if timer reaches 0
+            obj_player.freeze = true; //crab has paralyzed the player
             show_debug_message("attack");
         }
     }
 } else {
-    atktime = 15;
+    atktime = 30;
 }
 
-if (obj_player.y > obj_house.bbox_bottom && !obj_player.freeze) { //if the player is in front of the house and not frozen
-walktimer++;
-if (walktimer < 50) {
-if (x > obj_player.x) { //to the right of the player
-        x -= walkingspeed;
-        if (place_meeting(x - walkingspeed, y, obj_player)) {
-            obj_player.crabmeet = true;
-            x += walkingspeed;
-        } else {
-            obj_player.crabmeet = false;
-        }
-    } else if (x < obj_player.x) { //to the left of the player
-        x += walkingspeed;
-        if (place_meeting(x + walkingspeed, y, obj_player)) {
-            obj_player.crabmeet = true;
-            x -= walkingspeed;
-        } else {
-            obj_player.crabmeet = false;
-        }
-    }
-} else if (walktimer < 100) {
-    if (y > obj_player.y) { //below the player
-        y -= walkingspeed;
-        if (place_meeting(x, y - walkingspeed, obj_player)) {
-            obj_player.crabmeet = true;
-            y += walkingspeed;
-        } else {
-            obj_player.crabmeet = false;
-        }
-    } else if (y < obj_player.y) { //above the player
-        y += walkingspeed;
-        if (place_meeting(x, y + walkingspeed, obj_player)) {
-            obj_player.crabmeet = true;
-            y -= walkingspeed;
-        } else {
-            obj_player.crabmeet = false;
-        }
-    }
-} else {
-walktimer = 0;
-}
-} else if (obj_player.freeze) { //if player is frozen
-    if (x < resetx - walkingspeed) { //move crab to reset coordinates
-        x += walkingspeed
-    } else if (x > resetx + walkingspeed) {
-        x -= walkingspeed;
-    } else if (y > resety + walkingspeed) {
-        y -= walkingspeed;
-    } else if (y < resety - walkingspeed) {
-        y += walkingspeed;
-    }
+if (!hit) { //if crab wasn't just hit
+    crabwalk();
+} else { //crab has been hit
+	var lastx = x;
+	var lasty = y;
+	var lerpamt = .2;
+	var lerpdist = 30;
+    if (lastdir == up) {
+	 y = lerp(y, lasty + lerpdist, lerpamt)
+	 if (y >= lasty + lerpdist - lerpamt) {
+	 hit = false;
+	 }
+	} else if (lastdir == down) {
+		 y = lerp(y, lasty - lerpdist, lerpamt)
+	 if (y <= lasty - lerpdist + lerpamt) {
+	 hit = false;
+	 }
+	} else if (lastdir == left) {
+		 x = lerp(x, lastx + lerpdist, lerpamt)
+	 if (x >= lastx + lerpdist - lerpamt) {
+	 hit = false;
+	 }
+	} else if (lastdir == right) {
+			 x = lerp(x, lastx - lerpdist, lerpamt)
+	 if (x <= lastx - lerpdist + lerpamt) {
+	 hit = false;
+	 }
+	}
 }
