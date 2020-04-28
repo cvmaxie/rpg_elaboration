@@ -1,6 +1,8 @@
+
+
 if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) { //if the player is in front of the house and not frozen
     walktimer++; //add to walk timer (dictates changes in walking lastdirection)
-    if (walktimer < 50) {
+    if (walktimer < 50 && !closex) {
         if (x > obj_player.x) { //to the right of the player
             x -= walkingspeed;
 			lastdir = left;
@@ -20,7 +22,7 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
                 obj_player.crabmeet = false;
             }
         }
-    } else if (walktimer < 100) {
+    } else if (walktimer < 100 && !closey) {
         if (y > obj_player.y) { //below the player
             y -= walkingspeed;
 			lastdir = up;
@@ -43,7 +45,7 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
     } else { //reset walk timer
         walktimer = 0;
     }
-} else if (obj_player.freeze) { //if player is frozen
+} else if (obj_player.freeze) { //if player is paralyzed
     if (x < resetx - walkingspeed) { //move crab to reset coordinates (where it rests while player is frozen)
         x += walkingspeed
     } else if (x > resetx + walkingspeed) {

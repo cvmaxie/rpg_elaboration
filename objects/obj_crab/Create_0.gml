@@ -12,3 +12,8 @@ down = 1;
 left = 2;
 right = 3;
 lastdir = left;
+
+lastx = x; //last y (before getting hit)
+lasty = y;
+closex = false; //whether coordinates match player coordinates (prevents vibrating)
+closey = false

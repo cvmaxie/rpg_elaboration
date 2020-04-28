@@ -1,84 +1,76 @@
-if (!freeze) {
-freezecount = 360;
-#region attack
+if (!freeze) { //if not paralyzed (by crab) --player is able to walk
+    freezecount = 360; //timer for paralyzing duration is reset
 
-#endregion
-
-
-#region left and right walking
-if (keyboard_check(ord("A"))) { //pressing left
-	lastdir = left; //last direction pressed was sideways
-    x -= walkingspeed;
-    sprite_index = spr_side;
-    image_speed = 2;
-    image_xscale = 1;
-    if (image_index > 5) { //don't include idle sprite in loop
-        image_index = 0;
-    }
-
-    if (place_meeting(x - walkingspeed, y, obj_solids)) { //solids collision
-        x += walkingspeed;
-        //show_debug_message("left");
-    }
-} else if (keyboard_check(ord("D"))) { //pressing right
-	lastdir = right;
-    x += walkingspeed;
-    sprite_index = spr_side;
-    image_speed = 2;
-    image_xscale = -1; //invert direction
-    if (image_index > 5) { //don't include idle sprite in loop
-        image_index = 0;
-    }
-    if (place_meeting(x + walkingspeed, y, obj_solids)) { //solids collision
+    #region left and right walking
+    if (keyboard_check(ord("A"))) { //pressing left
+        lastdir = left; //last direction pressed was sideways
         x -= walkingspeed;
-        //show_debug_message("right");
-    }
-} else { //no movement
-    if (keyboard_check_released(ord("A")) || keyboard_check_released(ord("D"))) {
         sprite_index = spr_side;
-        image_index = 6; //idle sprite, no animation
-        image_speed = 0;
+        image_speed = 2;
+        image_xscale = 1;
+        if (image_index > 5) { //don't include idle sprite in loop
+            image_index = 0;
+        }
+        if (place_meeting(x - walkingspeed, y, obj_solids)) { //solids collision
+            x += walkingspeed;
+        }
+    } else if (keyboard_check(ord("D"))) { //pressing right
+        lastdir = right;
+        x += walkingspeed;
+        sprite_index = spr_side;
+        image_speed = 2;
+        image_xscale = -1; //invert direction
+        if (image_index > 5) { //don't include idle sprite in loop
+            image_index = 0;
+        }
+        if (place_meeting(x + walkingspeed, y, obj_solids)) { //solids collision
+            x -= walkingspeed;
+        }
+    } else { //no movement
+        if (keyboard_check_released(ord("A")) || keyboard_check_released(ord("D"))) {
+            sprite_index = spr_side;
+            image_index = 6; //idle sprite, no animation
+            image_speed = 0;
+        }
     }
+    #endregion
 
-}
-#endregion
-
-#region up and down walking
-if (keyboard_check(ord("W"))) { //pressing up
-	lastdir = up;
-    y -= walkingspeed;
-    sprite_index = spr_up;
-    image_speed = 2;
-    if (image_index > 5) { //don't include idle sprite in loop
-        image_index = 0;
-    }
-    if (place_meeting(x, y - walkingspeed, obj_solids)) { //solids collision
-        y += walkingspeed;
-        //show_debug_message("up");
-    }
-} else if (keyboard_check(ord("S"))) { //pressing down
-	lastdir = down;
-    y += walkingspeed;
-    sprite_index = spr_down;
-    image_speed = 2;
-    if (image_index > 5) { //don't include idle sprite in loop
-        image_index = 0;
-    }
-    if (place_meeting(x, y + walkingspeed, obj_solids)) { //solids collision
+    #region up and down walking
+    if (keyboard_check(ord("W"))) { //pressing up
+        lastdir = up;
         y -= walkingspeed;
-        //show_debug_message("down");
+        sprite_index = spr_up;
+        image_speed = 2;
+        if (image_index > 5) { //don't include idle sprite in loop
+            image_index = 0;
+        }
+        if (place_meeting(x, y - walkingspeed, obj_solids)) { //solids collision
+            y += walkingspeed;
+        }
+    } else if (keyboard_check(ord("S"))) { //pressing down
+        lastdir = down;
+        y += walkingspeed;
+        sprite_index = spr_down;
+        image_speed = 2;
+        if (image_index > 5) { //don't include idle sprite in loop
+            image_index = 0;
+        }
+        if (place_meeting(x, y + walkingspeed, obj_solids)) { //solids collision
+            y -= walkingspeed;
+        }
+    } else { //no movement
+        if (keyboard_check_released(ord("W")) || keyboard_check_released(ord("S"))) {
+            image_index = 6; //idle sprite, no animation
+            image_speed = 0;
+        }
     }
-} else { //no movement
-    if (keyboard_check_released(ord("W")) || keyboard_check_released(ord("S"))) {
-        image_index = 6; //idle sprite, no animation
-        image_speed = 0;
-    }
-}
-#endregion
+    #endregion
 
-} else {
-freezecount--;
-if (freezecount == 0) {
-freeze = false;
-}
+} else { //when paralyzed
+    sprite_index = spr_freeze;
+    freezecount--;
+    if (freezecount == 0) {
+        sprite_index = spr_down;
+        freeze = false;
+    }
 }

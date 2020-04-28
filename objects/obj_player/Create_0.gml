@@ -14,5 +14,6 @@ lastdir = up; //last direction walked in
 
 freeze = false;
 crabmeet = false;
+canhit = false;
 
 alarm[0] = 0;

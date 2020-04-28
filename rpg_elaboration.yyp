@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0974c2eb-7718-4f6a-b493-93850146bf7c",
+            "Value": {
+                "id": "f4931012-e68b-41a4-a6dc-bb399fabfe4a",
+                "resourcePath": "sprites\\spr_down_atk\\spr_down_atk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0b3c4e5b-0962-410b-846d-ad9037e3c21a",
             "Value": {
                 "id": "30139da4-0236-42ac-a686-b0a436bc6b02",
@@ -68,6 +76,14 @@
                 "id": "b30438c9-c339-4dc1-b472-dd06a038eef6",
                 "resourcePath": "rooms\\seashore\\seashore.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "0d805ebd-9856-4990-97be-abf0b839f655",
+            "Value": {
+                "id": "b5bfa7b1-951b-4894-8aa2-cfc1b065d070",
+                "resourcePath": "sprites\\spr_up_atk\\spr_up_atk.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
