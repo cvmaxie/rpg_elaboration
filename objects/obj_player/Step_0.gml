@@ -1,4 +1,4 @@
-/// @description movement + wall collision
+ /// @description movement + wall collision
 if (room = house_interior) { //interaction w/ npc behavior
     if (obj_npc.talking = false) { //only move when no dialogue is happening
         movement();
