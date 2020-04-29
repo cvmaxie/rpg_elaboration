@@ -6,6 +6,8 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
         if (x > obj_player.x) { //to the right of the player
             x -= walkingspeed;
 			lastdir = left;
+			sprite_index = spr_crab_side;
+			image_speed = 1;
             if (place_meeting(x - walkingspeed, y, obj_player)) {
                 obj_player.crabmeet = true;
                 x += walkingspeed;
@@ -54,5 +56,6 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
         y -= walkingspeed;
     } else if (y < resety - walkingspeed) {
         y += walkingspeed;
-    }
+    } else {sprite_index = spr_crab_down
+		image_speed = 0;}
 }
