@@ -8,7 +8,6 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
 			lastdir = left;
 			sprite_index = spr_crab_side;
 			image_speed = 1;
-			image_xscale = -1;
             if (place_meeting(x - walkingspeed, y, obj_player)) {
                 obj_player.crabmeet = true;
                 x += walkingspeed;
@@ -18,9 +17,6 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
         } else if (x < obj_player.x) { //to the left of the player
             x += walkingspeed;
 			lastdir = right;
-			sprite_index = spr_crab_side;
-			image_speed = 1;
-			image_xscale = 1;
             if (place_meeting(x + walkingspeed, y, obj_player)) {
                 obj_player.crabmeet = true;
                 x -= walkingspeed;
@@ -32,8 +28,6 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
         if (y > obj_player.y) { //below the player
             y -= walkingspeed;
 			lastdir = up;
-			sprite_index = spr_crab_up;
-			image_speed = 1;
             if (place_meeting(x, y - walkingspeed, obj_player)) {
                 obj_player.crabmeet = true;
                 y += walkingspeed;
@@ -43,8 +37,6 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
         } else if (y < obj_player.y) { //above the player
             y += walkingspeed;
 			lastdir = down;
-			sprite_index = spr_crab_down;
-			image_speed = 1;
             if (place_meeting(x, y + walkingspeed, obj_player)) {
                 obj_player.crabmeet = true;
                 y -= walkingspeed;
@@ -65,10 +57,5 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
     } else if (y < resety - walkingspeed) {
         y += walkingspeed;
     } else {sprite_index = spr_crab_down
-		image_speed = 0;
-		image_index = 0;}
-} else {
-sprite_index = spr_crab_up;
-image_speed = 0;
-image_index = 0;
+		image_speed = 0;}
 }
