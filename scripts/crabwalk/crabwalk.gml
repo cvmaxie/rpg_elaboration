@@ -1,3 +1,4 @@
+if (global.wood > 2) {
 
 
 if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) { //if the player is in front of the house and not frozen
@@ -48,14 +49,25 @@ if (obj_player.y > obj_house.bbox_bottom + walkingspeed && !obj_player.freeze) {
         walktimer = 0;
     }
 } else if (obj_player.freeze) { //if player is paralyzed
-    if (x < resetx - walkingspeed) { //move crab to reset coordinates (where it rests while player is frozen)
+	 //move crab to reset coordinates (where it rests while player is frozen)
+    if (x < resetx - walkingspeed) {
         x += walkingspeed
-    } else if (x > resetx + walkingspeed) {
+    } else if (x > resetx + walkingspeed) { //going to resting position
         x -= walkingspeed;
     } else if (y > resety + walkingspeed) {
         y -= walkingspeed;
     } else if (y < resety - walkingspeed) {
         y += walkingspeed;
     } else {sprite_index = spr_crab_down
+
 		image_speed = 0;}
+
+		image_speed = 0;
+		image_index = 0;} //resting position after player is frozen
+}
+} else {
+sprite_index = spr_crab_down;
+image_speed = 0;
+image_index = 0;
+
 }
