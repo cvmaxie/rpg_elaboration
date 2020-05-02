@@ -1,4 +1,4 @@
- /// @description checks when to display dialogue
+  /// @description checks when to display dialogue
  #region string + typewriter check
  wholestring = dialogue[global.state]; //entire string (for typewriter)
  strlength = string_length(wholestring); //length of entire string

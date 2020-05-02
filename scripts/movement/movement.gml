@@ -5,7 +5,7 @@ if (!freeze) { //if not paralyzed (by crab) --player is able to walk
     if (keyboard_check(ord("A"))) { //pressing left
         lastdir = left; //last direction pressed was sideways
         x -= walkingspeed;
-        sprite_index = spr_side;
+        sprite_index = sidesprite;
         image_speed = 2;
         image_xscale = 1;
         if (image_index > 5) { //don't include idle sprite in loop
@@ -17,7 +17,7 @@ if (!freeze) { //if not paralyzed (by crab) --player is able to walk
     } else if (keyboard_check(ord("D"))) { //pressing right
         lastdir = right;
         x += walkingspeed;
-        sprite_index = spr_side;
+        sprite_index = sidesprite;
         image_speed = 2;
         image_xscale = -1; //invert direction
         if (image_index > 5) { //don't include idle sprite in loop
@@ -28,7 +28,7 @@ if (!freeze) { //if not paralyzed (by crab) --player is able to walk
         }
     } else { //no movement
         if (keyboard_check_released(ord("A")) || keyboard_check_released(ord("D"))) {
-            sprite_index = spr_side;
+            sprite_index = sidesprite;
             image_index = 6; //idle sprite, no animation
             image_speed = 0;
         }
@@ -39,7 +39,7 @@ if (!freeze) { //if not paralyzed (by crab) --player is able to walk
     if (keyboard_check(ord("W"))) { //pressing up
         lastdir = up;
         y -= walkingspeed;
-        sprite_index = spr_up;
+        sprite_index = upsprite;
         image_speed = 2;
         if (image_index > 5) { //don't include idle sprite in loop
             image_index = 0;
@@ -50,7 +50,7 @@ if (!freeze) { //if not paralyzed (by crab) --player is able to walk
     } else if (keyboard_check(ord("S"))) { //pressing down
         lastdir = down;
         y += walkingspeed;
-        sprite_index = spr_down;
+        sprite_index = downsprite;
         image_speed = 2;
         if (image_index > 5) { //don't include idle sprite in loop
             image_index = 0;
@@ -70,7 +70,7 @@ if (!freeze) { //if not paralyzed (by crab) --player is able to walk
     sprite_index = spr_freeze;
     freezecount--;
     if (freezecount == 0) {
-        sprite_index = spr_down;
+        sprite_index = downsprite;
         freeze = false;
     }
 }

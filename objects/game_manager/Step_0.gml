@@ -11,4 +11,4 @@ if (room == start_screen) { //in start screen
         audio_play_sound(win, 1, false); //play win sound
         //room_goto(start_screen); //player finishes the game and returns to start screen
     }
-} else {}
+}

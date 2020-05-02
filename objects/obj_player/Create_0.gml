@@ -10,10 +10,14 @@ down = 1;
 left = 2;
 right = 3;
 
+upsprite = spr_up; //current up-walking sprite
+sidesprite = spr_side; //current side-walking sprite
+downsprite = spr_down; //current down-walking sprite
+
+
 lastdir = up; //last direction walked in
 
 freeze = false;
 crabmeet = false;
-canhit = false;
 
 alarm[0] = 0;

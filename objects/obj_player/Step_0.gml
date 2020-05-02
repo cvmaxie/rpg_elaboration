@@ -60,15 +60,15 @@ if (room == seashore && !freeze) { //in the seashore, player can attack if not p
     if (keyboard_check_released(vk_space)) { //return to normal sprite
         obj_crab.hit = false;
         if (lastdir == up) { //after hitting up
-            sprite_index = spr_up;
+            sprite_index = upsprite;
             image_index = 6;
         }
         if (lastdir == down) { //after hitting down
-            sprite_index = spr_down;
+            sprite_index = downsprite;
             image_index = 6;
         }
         if (lastdir == left || lastdir == right) { //after hitting sideways
-            sprite_index = spr_side;
+            sprite_index = sidesprite;
             image_index = 6;
         }
     }
