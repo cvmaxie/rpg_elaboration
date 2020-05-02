@@ -20,5 +20,12 @@ dialogue[12] = "It's done.";
 dialogue[13] = "...";
 dialogue[14] = "Oh, don't worry about me. I'll be okay. This isn't the first time I've waited out a storm."
 
+global.state_1 = 0; //asking the player to find watch
+global.state_2 = 1; //player found watch, asking player to collect wood
+global.state_3 = 2; //player got wood
+global.state_4 = 3; //building bridge
+global.state_5 = 4; //player can leave
+
+
 charcount = 0;
 add = false;
