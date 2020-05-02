@@ -511,6 +511,14 @@
             }
         },
         {
+            "Key": "9b96a27e-f780-4cce-8f37-c1af0a93b4cc",
+            "Value": {
+                "id": "1cb962b4-a785-42ba-9cb4-e09ee019bf60",
+                "resourcePath": "scripts\\attacking_crab\\attacking_crab.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9bb09c6b-36b8-4670-9628-ed2933e73d92",
             "Value": {
                 "id": "baaea676-a56a-4bbc-9f8d-a5b0aa17b10b",
@@ -599,6 +607,14 @@
             }
         },
         {
+            "Key": "b9fbcc51-f86b-4b6f-b480-eee4bb2fc4c0",
+            "Value": {
+                "id": "75178a85-e602-4e56-aa5c-1dc2f96107b0",
+                "resourcePath": "scripts\\player_overlap_behavior\\player_overlap_behavior.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "be4ea440-f12a-4d67-afd5-cbe0d02504bd",
             "Value": {
                 "id": "efeb930f-3aac-4845-b0f4-9e3483b4711e",
@@ -620,6 +636,14 @@
                 "id": "549af717-ee33-463a-8048-3866b560c650",
                 "resourcePath": "views\\c1fab313-acac-4524-98f0-f12aa1f9feb5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c34aa436-4224-4bef-ae3f-c1004f740203",
+            "Value": {
+                "id": "31cd28fb-49ae-440e-a020-9c186f069e31",
+                "resourcePath": "scripts\\spritechange\\spritechange.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -843,7 +867,10 @@
         "ca1b1978-e160-4215-b4d1-6737f6447976",
         "f2344dfb-f506-4402-bd17-ed0c7319ba8a",
         "53d1ea71-55ed-42fd-8c00-b3ae7bc03d3e",
-        "67b4ebb5-ae50-4843-aba5-f22b67d3a9dd"
+        "67b4ebb5-ae50-4843-aba5-f22b67d3a9dd",
+        "b9fbcc51-f86b-4b6f-b480-eee4bb2fc4c0",
+        "9b96a27e-f780-4cce-8f37-c1af0a93b4cc",
+        "c34aa436-4224-4bef-ae3f-c1004f740203"
     ],
     "tutorial": ""
 }

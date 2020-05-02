@@ -67,10 +67,16 @@ if (!freeze) { //if not paralyzed (by crab) --player is able to walk
     #endregion
 
 } else { //when paralyzed
-    sprite_index = spr_freeze;
+    sprite_index = spr_freeze; //paralysis countdown
     freezecount--;
-    if (freezecount == 0) {
+    if (freezecount == 0) { //at the end of paralysis
         sprite_index = downsprite;
         freeze = false;
+    }
+}
+
+if (alarm[0] <= 0) { //footstep sound timer
+    if (keyboard_check(ord("W")) || (keyboard_check(ord("S"))) || (keyboard_check(ord("A"))) || (keyboard_check(ord("D")))) {
+        alarm[0] = 25;
     }
 }
