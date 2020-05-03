@@ -1,7 +1,7 @@
 /// @description dialogue strings
 talking = false; //so that txt only displays in certain conditions
 input_check = false; //don't check for spacebar press
-depth = 4;
+depth = 50;
 
 //dialogue states:
 dialogue[0] = "Looks like a hurricane is coming.";

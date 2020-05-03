@@ -1,4 +1,5 @@
-	if (keyboard_check(vk_space)) { //press space to attack
+//controls when player is able to hit the crab
+if (keyboard_check(vk_space)) { //press space to attack
         obj_crab.hit = false;
         if (lastdir == up) { //attacking upwards
             sprite_index = upattacksprite;

@@ -1,5 +1,5 @@
 /// @description set up initial sprite states
-depth = 5;
+depth = 15;
 sprite_index = spr_up; //start out idle
 image_speed = 0;
 image_index = 6;
@@ -16,6 +16,7 @@ downsprite = spr_down; //current down-walking sprite
 upattacksprite = spr_up_atk;
 sideattacksprite = spr_side_atk;
 downattacksprite = spr_down_atk;
+freezesprite = spr_freeze_1;
 
 lastdir = up; //last direction walked in
 

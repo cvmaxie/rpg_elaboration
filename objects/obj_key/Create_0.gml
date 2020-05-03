@@ -1,4 +1,3 @@
 /// @description starting variables
-depth = 20;
-global.state = 0;
+depth = 90;
 global.key = false;

@@ -1,3 +1,4 @@
+//specifies text details: positioning, string, wrapping behavior
 var xpos = argument0;
 var ypos = argument1;
 var text = argument2; 

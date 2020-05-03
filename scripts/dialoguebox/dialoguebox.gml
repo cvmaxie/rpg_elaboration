@@ -1,3 +1,4 @@
+//box for positioning + displaying dialogue - executes txt script
 var box = sprite_get_height(spr_txt); //textbox sprite height
 var camerax = camera_get_view_x(view_camera[0]); //camera coordinates
 var cameray = camera_get_view_y(view_camera[0]);

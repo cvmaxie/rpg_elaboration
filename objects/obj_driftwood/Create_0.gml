@@ -1,4 +1,3 @@
 /// @description starting variables
-depth = 25;
-global.wood = 0;
+depth = 90;
 obtained = false;
