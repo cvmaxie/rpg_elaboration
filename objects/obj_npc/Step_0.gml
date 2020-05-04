@@ -15,7 +15,6 @@ if (keyboard_check_pressed(vk_space) && obj_player.y > y && place_meeting(x, bbo
     alarm[0] = 1; //play noise after alarm
     talking = true;
     add = true; //enable typewriter
-	obj_player.tutorial1 = false;
 }
 
 if (input_check && keyboard_check_pressed(vk_space)) { //when player presses space while talking

@@ -4,22 +4,22 @@
      //move crab to deposit stolen wood
      if (x < depositspotx - walkingspeed) { //RIGHT
          x += walkingspeed
-         sprite_index = spr_crab_side;
+         sprite_index = spr_crab_side_wood;
          image_speed = 1;
          image_xscale = 1;
      } else if (x > depositspotx + walkingspeed) { //LEFT
          x -= walkingspeed;
-         sprite_index = spr_crab_side;
+         sprite_index = spr_crab_side_wood;
          image_speed = 1;
          image_xscale = -1;
      } else if (y > depositspoty + walkingspeed) { //UP
          y -= walkingspeed;
-         sprite_index = spr_crab_up;
+         sprite_index = spr_crab_up_wood;
          image_speed = 1;
          image_xscale = 1;
      } else if (y < depositspoty - walkingspeed) { //DOWN
          y += walkingspeed;
-         sprite_index = spr_crab_down;
+         sprite_index = spr_crab_down_wood;
          image_speed = 1;
          image_xscale = 1;
      } else { //time to deposit wood
