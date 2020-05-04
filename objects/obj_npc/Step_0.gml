@@ -11,10 +11,11 @@ newstring = string_copy(wholestring, 1, charcount); //string with typewriter app
 //show_debug_message(charcount);
 
 
-if (keyboard_check_pressed(vk_space) && place_meeting(x, bbox_bottom + obj_player.walkingspeed, obj_player) || place_meeting(x, y - obj_player.walkingspeed, obj_player)) { //if space is pressed, display dialogue		 
+if (keyboard_check_pressed(vk_space) && obj_player.y > y && place_meeting(x, bbox_bottom + obj_player.walkingspeed, obj_player) || place_meeting(x, y - obj_player.walkingspeed, obj_player)) { //if space is pressed, display dialogue		 
     alarm[0] = 1; //play noise after alarm
     talking = true;
     add = true; //enable typewriter
+	obj_player.tutorial1 = false;
 }
 
 if (input_check && keyboard_check_pressed(vk_space)) { //when player presses space while talking

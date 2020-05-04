@@ -6,6 +6,7 @@ if ((global.wood > 0 && global.wood < 6) || obj_player.freeze) {
         crabwalk(); //crab can walk
         lastx = x; //for directional position relative to player
         lasty = y;
+		part_emitter_region(parts, emitter, -10, -10, -10, -10, ps_shape_ellipse, ps_distr_gaussian);
     } else { //crab has been hit
         crab_was_hit();
     }

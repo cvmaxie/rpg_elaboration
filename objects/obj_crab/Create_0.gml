@@ -19,3 +19,18 @@ closex = false; //whether coordinates match player coordinates (prevents vibrati
 closey = false
 
 deposited = false; //whether stolen wood has been deposited
+
+parts= part_system_create(); //sand spray when hit by player
+sandcolor = make_color_rgb(222, 179, 135);
+dksandcolor = make_color_rgb(167, 129, 82);
+part_system_depth(parts, 14);
+spray = part_type_create();
+part_type_shape(spray, pt_shape_pixel);
+part_type_size(spray, .5, 1.5, .01, .01);
+part_type_speed(spray, 0, 0, 0, 0);
+part_type_life(spray, 5, 20);
+part_type_color2(spray, sandcolor, dksandcolor);
+part_type_alpha2(spray, 1.0, .9);
+part_type_gravity(spray, 0.01, 270);
+
+emitter = part_emitter_create(parts);

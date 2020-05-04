@@ -22,3 +22,5 @@ dialogue[14] = "Oh, don't worry about me. I'll be okay. This isn't the first tim
 
 charcount = 0;
 add = false;
+
+

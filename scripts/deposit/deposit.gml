@@ -38,14 +38,14 @@
          sprite_index = spr_crab_side;
          image_speed = 1;
          image_xscale = -1;
-     } else if (y > resety + walkingspeed) { //DOWN
+     } else if (y > resety + walkingspeed) { //UP
          y -= walkingspeed;
-         sprite_index = spr_crab_down;
+         sprite_index = spr_crab_up;
          image_speed = 1;
          image_xscale = 1;
-     } else if (y < resety - walkingspeed) { //UP
+     } else if (y < resety - walkingspeed) { //DOWN
          y += walkingspeed;
-         sprite_index = spr_crab_up;
+         sprite_index = spr_crab_down;
          image_speed = 1;
          image_xscale = 1;
      } else {

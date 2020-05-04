@@ -13,7 +13,9 @@
         "02fadd3e-27bb-4374-9562-1e19662b4d62",
         "67a61b93-4d5c-4bfe-bea1-e737f6c6379b",
         "8ff5fe11-d1ea-498a-b6c0-2bed168f89ee",
-        "0c441dc6-70e6-4362-acf9-cdb2ae9e4533"
+        "0c441dc6-70e6-4362-acf9-cdb2ae9e4533",
+        "a57dc9dc-af9c-4a8f-b306-ca5eb29469e2",
+        "a790e27c-44cd-44fb-b26f-4f32c4fad3e1"
     ],
     "filterType": "GMSprite",
     "folderName": "background_elements",
