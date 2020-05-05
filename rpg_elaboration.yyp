@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "4005e3e2-4a7f-4fba-925f-d76a714e66fc",
+            "Value": {
+                "id": "eb08dcb8-f7bb-4f10-a681-e7c7aa403a9a",
+                "resourcePath": "sounds\\punch\\punch.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "46875f43-a74f-442f-8a8c-5a97a3dc8f92",
             "Value": {
                 "id": "2b6e0b73-ca8d-4160-8382-be95483ebef4",

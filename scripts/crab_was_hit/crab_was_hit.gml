@@ -1,6 +1,6 @@
 //bouncing the crab away from the player for a moment after it has been hit
 var lerpamt = .4;
-var lerpdist = 30;
+var lerpdist = 50;
 var smalldist = 4; //small emitter range for particle
 var largedist = 6; //large emitter range for particle
 if (place_meeting(x, y, obj_solids)) {
