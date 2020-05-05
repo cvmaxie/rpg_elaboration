@@ -2,6 +2,8 @@
 // You can write your code in this editor
 global.wood = 0;
 global.state = 0;
+global.tutorial1 = false;
+global.tutorial2 = false;
 
 ambient = part_system_create(); //ink dust for player death
 

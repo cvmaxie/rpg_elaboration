@@ -6,9 +6,9 @@ if (keyboard_check(vk_space)) { //press space to attack
         image_index = 0;
         if (crabmeet && obj_crab.lastdir == down) { //if in contact with crab from below
             obj_crab.hit = true; //crab has been hit
-			tutorial2 = false;
+			global.tutorial2 = false;
             if (alarm[1] <= 0) { //play hit sound
-                alarm[1] = 5;
+                alarm[1] = 15;
             }
         }
     }
@@ -17,9 +17,9 @@ if (keyboard_check(vk_space)) { //press space to attack
         image_index = 0;
         if (crabmeet && obj_crab.lastdir == up) { //if in contact with crab from above
             obj_crab.hit = true; //crab has been hit
-			tutorial2 = false;
+			global.tutorial2 = false;
             if (alarm[1] <= 0) { //play hit sound
-                alarm[1] = 5;
+                alarm[1] = 15;
             }
         }
     }
@@ -28,16 +28,16 @@ if (keyboard_check(vk_space)) { //press space to attack
         image_index = 0;
         if (lastdir == left && crabmeet && obj_crab.lastdir == right) { //if in contact with crab
             obj_crab.hit = true; //crab has been hit
-			tutorial2 = false;
+			global.tutorial2 = false;
             if (alarm[1] <= 0) { //play hit sound
-                alarm[1] = 5;
+                alarm[1] = 15;
             }
         }
         if (lastdir == right && crabmeet && obj_crab.lastdir == left) { //if in contact with crab
             obj_crab.hit = true; //crab has been hit
-			tutorial2 = false;
+			global.tutorial2 = false;
             if (alarm[1] <= 0) { //play hit sound
-                alarm[1] = 5;
+                alarm[1] = 15;
             }
         }
     }

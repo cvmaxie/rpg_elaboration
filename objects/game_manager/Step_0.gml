@@ -14,15 +14,20 @@ if (room == start_screen) { //in start screen
 }
 
 if (room == house_interior) {
+    if (global.state == 0 && !obj_npc.talking) {
+        global.tutorial1 = true; //show spacebar suggestion
+    } else {
+        global.tutorial1 = false
+    }
     dusttimer++;
     if (dusttimer == 15 && room == house_interior) {
         dusttimer = 0;
         dustwindow = choose(1, 2);
         if (dustwindow == 1) {
-            dustspot = random_range(8, 33);
+            dustspot = random_range(10, 40);
             dustheight = random_range(.35, .55);
         } else {
-            dustspot = random_range(43, 52);
+            dustspot = random_range(45, 60);
             dustheight = random_range(.35, .4);
         }
         part_emitter_region(ambient, bunnyemitter, obj_npc.x + dustspot, obj_npc.x + dustspot, room_height * dustheight, room_height * dustheight, ps_shape_rectangle, ps_distr_gaussian);
@@ -34,5 +39,4 @@ if (room == house_interior) {
     }
 } else {
     part_emitter_region(ambient, bunnyemitter, 0, 0, room_height, room_height, ps_shape_ellipse, ps_distr_gaussian);
-    part_emitter_stream(ambient, bunnyemitter, bunny, 1);
 }

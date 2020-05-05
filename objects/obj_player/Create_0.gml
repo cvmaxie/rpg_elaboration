@@ -24,6 +24,4 @@ freeze = false; //whether "paralyzed" (caused by the crab)
 crabmeet = false; //whether touching the crab
 
 alarm[0] = 0; //for footstep sound
-
-tutorial1 = true; //indicates to press space to talk to npc
-tutorial2 = true; //indicates to press space to attack crab
+global.tutorial2 = true;

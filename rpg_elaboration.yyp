@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "26255e2c-4122-414a-9793-95e35c529123",
+            "Value": {
+                "id": "e37c1243-8abd-4f1e-baee-af76d4c6f396",
+                "resourcePath": "sprites\\spr_crab_up_wood\\spr_crab_up_wood.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "26324ab1-8f57-4a75-a1b8-ad6903466132",
             "Value": {
                 "id": "a822f00d-d05d-46e6-b594-f8350765ed04",
@@ -259,6 +267,14 @@
             "Value": {
                 "id": "77f44598-b7af-4603-8cbd-99ba3c173388",
                 "resourcePath": "sprites\\spr_side\\spr_side.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3c38bae2-9e20-4e6b-9185-05515197d3b7",
+            "Value": {
+                "id": "64092cd5-0b34-4629-b584-3c7560227212",
+                "resourcePath": "sprites\\spr_crab_down_wood\\spr_crab_down_wood.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -460,6 +476,14 @@
                 "id": "11659e87-d42e-486a-b09a-f2b7b1c220e4",
                 "resourcePath": "options\\html5\\options_html5.yy",
                 "resourceType": "GMHtml5Options"
+            }
+        },
+        {
+            "Key": "764bb9f8-b286-46e2-add9-3893b1973e23",
+            "Value": {
+                "id": "f6f76388-ad68-4ddf-ae6f-8cb9c5741628",
+                "resourcePath": "sprites\\spr_crab_side_wood\\spr_crab_side_wood.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

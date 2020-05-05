@@ -11,7 +11,6 @@ if (walktimer < 50 && !closex) { //-----LEFT + RIGHT MOVEMENT
         if (place_meeting(x - followspeed, y, obj_player)) {
             x += followspeed;
 			image_speed = 0;
-			depth = 4;
         }
     } else if (x < obj_player.bbox_right) { //to the left of the player
         x += followspeed;
@@ -22,7 +21,6 @@ if (walktimer < 50 && !closex) { //-----LEFT + RIGHT MOVEMENT
         if (place_meeting(x + followspeed, y, obj_player)) {
             x -= followspeed;
 			image_speed = 0;
-			depth = 4;
         }
     }
 } else if (walktimer < 100 && !closey) { //UP + DOWN MOVEMENT
