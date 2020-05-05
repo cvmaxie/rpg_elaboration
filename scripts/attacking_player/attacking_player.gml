@@ -5,6 +5,9 @@ if (obj_player.crabmeet) { //---ATTACKING _PLAYER
         atktime--;
         if (atktime == 0) { //if timer reaches 0
             obj_player.freeze = true; //crab has paralyzed the player
+			if (alarm[0] <= 0) {
+				alarm[0] = 15;
+			}
             deposited = false;
             global.wood--;
             depositspotx = room_width * .45;
