@@ -5,6 +5,6 @@ if (y > obj_player.y) { //overlap if player is behind (lower y pos)
 	obj_crab.depth = 70;
 	}
     //show_debug_message("overlap")
-} else if (place_empty(obj_player.x, obj_player.y - obj_player.sprite_yoffset, obj_crab)) {
+} else if (!place_meeting(obj_player.x, obj_player.y - obj_player.sprite_yoffset, obj_crab)) {
     obj_player.depth = 11
 }
