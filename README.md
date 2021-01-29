@@ -1,4 +1,4 @@
-# rpg_elaboration
+# seashore
  (Made for my Intro to Game Development class at NYU)\
  Simple game prototype with RPG mechanics\
 <a href = "https://cvmaxie.itch.io/seashore">Click to Play in Browser</a> \
